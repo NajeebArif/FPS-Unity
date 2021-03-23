@@ -19,10 +19,11 @@ public class FireBall : MonoBehaviour
         transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         PlayerCharacter playerCharacter = other.GetComponent<PlayerCharacter>();
         if(playerCharacter != null) {
-            Debug.Log("Player Hit.");
+            Debug.Log("Player Hurt.");
+            playerCharacter.hurt(damage);
         }
         Destroy(this.gameObject);
     }

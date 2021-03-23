@@ -30,8 +30,7 @@ public class WanderingAI : MonoBehaviour
                 if (hitObject.GetComponent<PlayerCharacter>()) {
                     if(_fireball == null) {
                         _fireball = Instantiate(fireballPrefab) as GameObject;
-                        _fireball.transform.position =
-                            transform.TransformPoint(Vector3.forward * 1.5f);
+                        _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
                         _fireball.transform.rotation = transform.rotation;
                     }
                 }

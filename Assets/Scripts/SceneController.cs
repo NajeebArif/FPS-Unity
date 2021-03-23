@@ -19,7 +19,11 @@ public class SceneController : MonoBehaviour
     {
         if (_enemy == null) {
             _enemy = Instantiate(enemyPrefab) as GameObject;
-            _enemy.transform.position = new Vector3(Random.Range(-75, 75), prefabHeight, Random.Range(-75, 75));
+            //int x = Random.Range(-75, 75);
+            int x = 10;
+            int z = 10;
+            //int z = Random.Range(-75, 75);
+            _enemy.transform.position = new Vector3(x, prefabHeight, z);
             float angle = Random.Range(0, 360);
             _enemy.transform.Rotate(0, angle, 0);
         }
